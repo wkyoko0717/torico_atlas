@@ -1,136 +1,160 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="タロット全78枚を大アルカナ・小アルカナ・4スート・コートカードで見渡せる一覧ページ"
-    />
-    <title>THE TAROT ATLAS | 78 CARDS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-glow page-glow--one"></div>
-    <div class="page-glow page-glow--two"></div>
 
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="THE TAROT ATLAS トップへ">
-        <span class="brand-mark">✦</span>
-        <span>THE TAROT ATLAS</span>
-      </a>
-      <p class="header-note">FOUNDATIONS / 01</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="タロット全78枚を大アルカナ・小アルカナ・4スート・コートカードで見渡せる一覧ページ" />
+  <title>THE TAROT ATLAS | 78 CARDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">TAROT COURSE · CARD LIBRARY</p>
-        <h1 id="page-title">78枚のカードを<br /><em>ひとつの地図に。</em></h1>
-        <p class="hero-copy">
-          タロットは、大きな人生の物語を語る22枚の大アルカナと、
-          日々の出来事を映す56枚の小アルカナでできています。
-        </p>
-        <div class="overview" aria-label="カード構成">
-          <div class="overview-item overview-item--major"><strong>22</strong><span>大アルカナ</span></div>
-          <div class="overview-item overview-item--minor"><strong>56</strong><span>小アルカナ</span></div>
-          <div class="overview-item overview-item--court"><strong>16</strong><span>コートカード</span></div>
+<body>
+  <div class="page-glow page-glow--one"></div>
+  <div class="page-glow page-glow--two"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="THE TAROT ATLAS トップへ">
+      <span class="brand-mark">✦</span>
+      <span>THE TAROT ATLAS</span>
+    </a>
+    <p class="header-note">FOUNDATIONS / 01</p>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">TAROT COURSE · CARD LIBRARY</p>
+      <h1 id="page-title">78枚のカードを<br /><em>ひとつの地図に。</em></h1>
+      <p class="hero-copy">
+        タロットは、大きな人生の物語を語る22枚の大アルカナと、
+        日々の出来事を映す56枚の小アルカナでできています。
+      </p>
+      <div class="overview" aria-label="カード構成">
+        <div class="overview-item overview-item--major"><strong>22</strong><span>大アルカナ</span></div>
+        <div class="overview-item overview-item--minor"><strong>56</strong><span>小アルカナ</span></div>
+        <div class="overview-item overview-item--court"><strong>16</strong><span>コートカード</span></div>
+      </div>
+    </section>
+
+    <nav class="filters" aria-label="カードの絞り込み">
+      <p class="filter-label">VIEW BY</p>
+      <div class="filter-list">
+        <button class="filter is-active" type="button" data-filter="all">すべて <span>78</span></button>
+        <button class="filter" type="button" data-filter="major">大アルカナ <span>22</span></button>
+        <button class="filter" type="button" data-filter="minor">小アルカナ <span>56</span></button>
+        <button class="filter filter--wand" type="button" data-filter="wands">ワンド <span>14</span></button>
+        <button class="filter filter--cup" type="button" data-filter="cups">カップ <span>14</span></button>
+        <button class="filter filter--sword" type="button" data-filter="swords">ソード <span>14</span></button>
+        <button class="filter filter--pentacle" type="button" data-filter="pentacles">ペンタクル <span>14</span></button>
+        <button class="filter filter--court" type="button" data-filter="court">コートカード <span>16</span></button>
+      </div>
+    </nav>
+
+    <div class="catalogue" id="catalogue">
+      <section class="card-section section--major" data-section="major" aria-labelledby="major-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">THE GREAT JOURNEY</p>
+            <h2 id="major-title">大アルカナ <span>MAJOR ARCANA</span></h2>
+          </div>
+          <p class="section-description">魂の成長と、人生を動かす大きなテーマ。0番から21番までの物語。</p>
+          <p class="section-count">22 CARDS</p>
+        </div>
+        <div class="card-grid" id="major-grid"></div>
+      </section>
+
+      <section class="minor-intro" data-section="minor" aria-labelledby="minor-title">
+        <p class="section-kicker">THE EVERYDAY STORY</p>
+        <h2 id="minor-title">小アルカナ <span>MINOR ARCANA</span></h2>
+        <p>毎日の気持ちや出来事を描く56枚。4つのスートは、それぞれ異なる世界の見方を教えてくれます。</p>
+        <div class="suit-key" aria-label="4スートのキーワード">
+          <div class="suit-key__item suit-key__item--wand"><span>♧</span><b>ワンド</b><small>情熱・行動</small></div>
+          <div class="suit-key__item suit-key__item--cup"><span>♢</span><b>カップ</b><small>感情・愛</small></div>
+          <div class="suit-key__item suit-key__item--sword"><span>✣</span><b>ソード</b><small>思考・言葉</small></div>
+          <div class="suit-key__item suit-key__item--pentacle"><span>✦</span><b>ペンタクル</b><small>現実・豊かさ</small></div>
         </div>
       </section>
 
-      <nav class="filters" aria-label="カードの絞り込み">
-        <p class="filter-label">VIEW BY</p>
-        <div class="filter-list">
-          <button class="filter is-active" type="button" data-filter="all">すべて <span>78</span></button>
-          <button class="filter" type="button" data-filter="major">大アルカナ <span>22</span></button>
-          <button class="filter" type="button" data-filter="minor">小アルカナ <span>56</span></button>
-          <button class="filter filter--wand" type="button" data-filter="wands">ワンド <span>14</span></button>
-          <button class="filter filter--cup" type="button" data-filter="cups">カップ <span>14</span></button>
-          <button class="filter filter--sword" type="button" data-filter="swords">ソード <span>14</span></button>
-          <button class="filter filter--pentacle" type="button" data-filter="pentacles">ペンタクル <span>14</span></button>
-          <button class="filter filter--court" type="button" data-filter="court">コートカード <span>16</span></button>
-        </div>
-      </nav>
-
-      <div class="catalogue" id="catalogue">
-        <section class="card-section section--major" data-section="major" aria-labelledby="major-title">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">THE GREAT JOURNEY</p>
-              <h2 id="major-title">大アルカナ <span>MAJOR ARCANA</span></h2>
-            </div>
-            <p class="section-description">魂の成長と、人生を動かす大きなテーマ。0番から21番までの物語。</p>
-            <p class="section-count">22 CARDS</p>
-          </div>
-          <div class="card-grid" id="major-grid"></div>
-        </section>
-
-        <section class="minor-intro" data-section="minor" aria-labelledby="minor-title">
-          <p class="section-kicker">THE EVERYDAY STORY</p>
-          <h2 id="minor-title">小アルカナ <span>MINOR ARCANA</span></h2>
-          <p>毎日の気持ちや出来事を描く56枚。4つのスートは、それぞれ異なる世界の見方を教えてくれます。</p>
-          <div class="suit-key" aria-label="4スートのキーワード">
-            <div class="suit-key__item suit-key__item--wand"><span>♧</span><b>ワンド</b><small>情熱・行動</small></div>
-            <div class="suit-key__item suit-key__item--cup"><span>♢</span><b>カップ</b><small>感情・愛</small></div>
-            <div class="suit-key__item suit-key__item--sword"><span>✣</span><b>ソード</b><small>思考・言葉</small></div>
-            <div class="suit-key__item suit-key__item--pentacle"><span>✦</span><b>ペンタクル</b><small>現実・豊かさ</small></div>
-          </div>
-        </section>
-
-        <section class="card-section section--wand" data-section="wands" aria-labelledby="wands-title">
-          <div class="section-heading">
-            <div><p class="section-kicker">FIRE · ACTION</p><h2 id="wands-title">ワンド <span>WANDS</span></h2></div>
-            <p class="section-description">ひらめき、意志、行動力。火のエレメントが動かすエネルギー。</p>
-            <p class="section-count">14 CARDS</p>
-          </div>
-          <div class="card-grid" id="wands-grid"></div>
-        </section>
-
-        <section class="card-section section--cup" data-section="cups" aria-labelledby="cups-title">
-          <div class="section-heading">
-            <div><p class="section-kicker">WATER · FEELING</p><h2 id="cups-title">カップ <span>CUPS</span></h2></div>
-            <p class="section-description">愛、喜び、つながり。水のエレメントが映す、心の景色。</p>
-            <p class="section-count">14 CARDS</p>
-          </div>
-          <div class="card-grid" id="cups-grid"></div>
-        </section>
-
-        <section class="card-section section--sword" data-section="swords" aria-labelledby="swords-title">
-          <div class="section-heading">
-            <div><p class="section-kicker">AIR · THOUGHT</p><h2 id="swords-title">ソード <span>SWORDS</span></h2></div>
-            <p class="section-description">思考、決断、言葉。風のエレメントがもたらす、鋭い気づき。</p>
-            <p class="section-count">14 CARDS</p>
-          </div>
-          <div class="card-grid" id="swords-grid"></div>
-        </section>
-
-        <section class="card-section section--pentacle" data-section="pentacles" aria-labelledby="pentacles-title">
-          <div class="section-heading">
-            <div><p class="section-kicker">EARTH · MATERIAL</p><h2 id="pentacles-title">ペンタクル <span>PENTACLES</span></h2></div>
-            <p class="section-description">仕事、暮らし、豊かさ。地のエレメントが育てる、確かな実り。</p>
-            <p class="section-count">14 CARDS</p>
-          </div>
-          <div class="card-grid" id="pentacles-grid"></div>
-        </section>
-
-        <section class="court-note" data-section="court" aria-labelledby="court-title">
-          <div class="court-note__symbol">♛</div>
+      <section class="card-section section--wand" data-section="wands" aria-labelledby="wands-title">
+        <div class="section-heading">
           <div>
-            <p class="section-kicker">MEET THE CHARACTERS</p>
-            <h2 id="court-title">コートカード <span>COURT CARDS</span></h2>
-            <p>各スートのペイジ、ナイト、クイーン、キング。16人の人物が、あなたの内面や誰かとの関係を映します。</p>
+            <p class="section-kicker">FIRE · ACTION</p>
+            <h2 id="wands-title">ワンド <span>WANDS</span></h2>
           </div>
-          <div class="court-roles"><span>PAGE</span><span>KNIGHT</span><span>QUEEN</span><span>KING</span></div>
-        </section>
-      </div>
-    </main>
+          <p class="section-description">仕事、意志、行動力。火のエレメントが動かすエネルギー。</p>
+          <p class="section-count">14 CARDS</p>
+        </div>
+        <div class="card-grid" id="wands-grid"></div>
+      </section>
 
-    <footer><span>THE TAROT ATLAS</span><span>ALL 78 CARDS · A QUIET PLACE TO LEARN</span></footer>
-    <script src="script.js"></script>
-  </body>
+      <section class="card-section section--cup" data-section="cups" aria-labelledby="cups-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">WATER · FEELING</p>
+            <h2 id="cups-title">カップ <span>CUPS</span></h2>
+          </div>
+          <p class="section-description">愛、喜び、つながり。水のエレメントが映す、心の景色。</p>
+          <p class="section-count">14 CARDS</p>
+        </div>
+        <div class="card-grid" id="cups-grid"></div>
+      </section>
+
+      <section class="card-section section--sword" data-section="swords" aria-labelledby="swords-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">AIR · THOUGHT</p>
+            <h2 id="swords-title">ソード <span>SWORDS</span></h2>
+          </div>
+          <p class="section-description">思考、決断、言葉。風のエレメントがもたらす、鋭い気づき。</p>
+          <p class="section-count">14 CARDS</p>
+        </div>
+        <div class="card-grid" id="swords-grid"></div>
+      </section>
+
+      <section class="card-section section--pentacle" data-section="pentacles" aria-labelledby="pentacles-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">EARTH · MATERIAL</p>
+            <h2 id="pentacles-title">ペンタクル <span>PENTACLES</span></h2>
+          </div>
+          <p class="section-description">お金、豊かさ。地のエレメントが育てる、確かな実り。</p>
+          <p class="section-count">14 CARDS</p>
+        </div>
+        <div class="card-grid" id="pentacles-grid"></div>
+      </section>
+
+      <section class="court-note" data-section="court" aria-labelledby="court-title">
+        <div class="court-note__symbol">♛</div>
+        <div>
+          <p class="section-kicker">MEET THE CHARACTERS</p>
+          <h2 id="court-title">コートカード <span>COURT CARDS</span></h2>
+          <p>各スートのペイジ、ナイト、クイーン、キング。16人の人物が、あなたの内面や誰かとの関係を映します。</p>
+        </div>
+        <div class="court-roles"><span>PAGE</span><span>KNIGHT</span><span>QUEEN</span><span>KING</span></div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="card-modal" id="card-modal" aria-labelledby="modal-card-title">
+    <article class="card-modal__content">
+      <button class="card-modal__close" type="button" aria-label="カードの意味を閉じる">×</button>
+      <p class="card-modal__eyebrow" id="modal-card-number"></p>
+      <h2 class="card-modal__title" id="modal-card-title">
+        <span id="modal-card-name"></span>
+        <small id="modal-card-english"></small>
+      </h2>
+      <p class="card-modal__keyword" id="modal-card-keyword"></p>
+      <p class="card-modal__meaning" id="modal-card-meaning"></p>
+    </article>
+  </dialog>
+
+  <footer><span>THE TAROT ATLAS</span><span>ALL 78 CARDS · A QUIET PLACE TO LEARN</span></footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
