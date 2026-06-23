@@ -49,7 +49,7 @@ function createCard({ image, number, name, english, isCourt = false, meaning }) 
   if (meaning) {
     card.type = "button";
     card.setAttribute("aria-label", `${name}の意味を読む`);
-    card.addEventListener("click", () => showMajorMeaning({ number, name, english, ...meaning }));
+    card.addEventListener("click", () => showMajorMeaning({ image, number, name, english, ...meaning }));
   }
   card.innerHTML = `
     <div class="card-image"><img src="${image}" alt="${name}（${english}）" loading="lazy"></div>
@@ -105,13 +105,16 @@ function setFilter(filter) {
 filters.forEach(button => button.addEventListener("click", () => setFilter(button.dataset.filter)));
 
 const cardModal = document.querySelector("#card-modal");
+const modalImage = document.querySelector("#modal-card-image");
 const modalNumber = document.querySelector("#modal-card-number");
 const modalName = document.querySelector("#modal-card-name");
 const modalEnglish = document.querySelector("#modal-card-english");
 const modalKeyword = document.querySelector("#modal-card-keyword");
 const modalMeaning = document.querySelector("#modal-card-meaning");
 
-function showMajorMeaning({ number, name, english, keyword, meaning }) {
+function showMajorMeaning({ image, number, name, english, keyword, meaning }) {
+  modalImage.src = image;
+  modalImage.alt = `${name}（${english}）`;
   modalNumber.textContent = number;
   modalName.textContent = name;
   modalEnglish.textContent = english;

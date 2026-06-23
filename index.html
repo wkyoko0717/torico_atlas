@@ -62,7 +62,7 @@
             <p class="section-kicker">THE GREAT JOURNEY</p>
             <h2 id="major-title">大アルカナ <span>MAJOR ARCANA</span></h2>
           </div>
-          <p class="section-description">魂の成長と、人生を動かす大きなテーマ。0番から21番までの物語。</p>
+          <p class="section-description">魂の成長と、人生を動かす大きなテーマ。壮大な物語。</p>
           <p class="section-count">22 CARDS</p>
         </div>
         <div class="card-grid" id="major-grid"></div>
@@ -143,13 +143,20 @@
   <dialog class="card-modal" id="card-modal" aria-labelledby="modal-card-title">
     <article class="card-modal__content">
       <button class="card-modal__close" type="button" aria-label="カードの意味を閉じる">×</button>
-      <p class="card-modal__eyebrow" id="modal-card-number"></p>
-      <h2 class="card-modal__title" id="modal-card-title">
-        <span id="modal-card-name"></span>
-        <small id="modal-card-english"></small>
-      </h2>
-      <p class="card-modal__keyword" id="modal-card-keyword"></p>
-      <p class="card-modal__meaning" id="modal-card-meaning"></p>
+      <div class="card-modal__layout">
+        <figure class="card-modal__image-wrap">
+          <img id="modal-card-image" src="" alt="" />
+        </figure>
+        <div class="card-modal__copy">
+          <p class="card-modal__eyebrow" id="modal-card-number"></p>
+          <h2 class="card-modal__title" id="modal-card-title">
+            <span id="modal-card-name"></span>
+            <small id="modal-card-english"></small>
+          </h2>
+          <p class="card-modal__keyword" id="modal-card-keyword"></p>
+          <p class="card-modal__meaning" id="modal-card-meaning"></p>
+        </div>
+      </div>
     </article>
   </dialog>
 
